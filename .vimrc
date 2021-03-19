@@ -16,12 +16,13 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'preservim/nerdtree'
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plugin 'ryanoasis/vim-devicons'
-Plugin 'vim-syntastic/syntastic'
+Plugin 'instant-markdown/vim-instant-markdown', {'rtp': 'after'}
 
 " VimAirline
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'junegunn/seoul256.vim'
+Plugin '907th/vim-auto-save'
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
@@ -102,3 +103,19 @@ map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
+
+:set textwidth=80
+:set wrap
+let g:auto_save = 1
+"Uncomment to override defaults:
+"let g:instant_markdown_slow = 1
+let g:instant_markdown_autostart = 0
+"let g:instant_markdown_open_to_the_world = 1
+"let g:instant_markdown_allow_unsafe_content = 1
+"let g:instant_markdown_allow_external_content = 0
+"let g:instant_markdown_mathjax = 1
+"let g:instant_markdown_mermaid = 1
+let g:instant_markdown_logfile = '/tmp/instant_markdown.log'
+"let g:instant_markdown_autoscroll = 0
+"let g:instant_markdown_port = 8888
+"let g:instant_markdown_python = 1
